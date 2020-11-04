@@ -1,0 +1,29 @@
+Package: barrierALK
+Version: 0.2.0.3
+Title: Age-Length Keys with physical barriers
+Description: This package will generate smoothed age-length keys using continuation ratio logits with support for spatial information through both the standard stochastic partial differentition equation approach and with support for physical barriers through the SPDE barrier approach. 
+Authors@R: person("Jonathan", "Babyn", , "jn805248@dal.ca", c("aut", "cre"))
+License: GPL-3
+Additional_repositories: https://inla.r-inla-download.org/R/stable/
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Imports: 
+    TMB,
+    INLA,
+    Rcpp,
+    rms,
+    formula.tools,
+    sf,
+    ggplot2,
+    viridisLite,
+    optimParallel,
+    doParallel,
+    groupdata2,
+    standardize
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+LinkingTo:
+    Rcpp,
+    RcppEigen,
+    TMB
