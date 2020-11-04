@@ -4,7 +4,9 @@
 \name{barrierMesh}
 \alias{barrierMesh}
 \title{Barrier mesh simplifed for 3Ps}
-\format{An object of class \code{list} of length 3.}
+\format{
+An object of class \code{list} of length 3.
+}
 \usage{
 barrierMesh
 }

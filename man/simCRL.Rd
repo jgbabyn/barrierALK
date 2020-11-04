@@ -4,9 +4,19 @@
 \alias{simCRL}
 \title{Simulate CRL data with the specified parameters}
 \usage{
-simCRL(fParamMatrix, intercept = TRUE, size = 1000, hyperp1 = NULL,
-  hyperp2 = NULL, mesh = NULL, barrier.triangles = NULL,
-  barrier.polygon = NULL, sizeL = size, seed = NULL)
+simCRL(
+  fParamMatrix,
+  intercept = TRUE,
+  size = 1000,
+  hyperp1 = NULL,
+  hyperp2 = NULL,
+  mesh = NULL,
+  barrier.triangles = NULL,
+  barrier.polygon = NULL,
+  sizeL = size,
+  seed = NULL,
+  distro = rnorm
+)
 }
 \arguments{
 \item{fParamMatrix}{the matrix of fixed parameters, rows are classes-1,columns are number of parameters, first column is
@@ -29,6 +39,8 @@ intercept if allowed}
 \item{sizeL}{number of spatial locations to sim, if not given, then unique location for each size}
 
 \item{seed}{the seed to use}
+
+\item{distro}{the distribution to use for the parameters}
 }
 \value{
 A data frame containing the simulated response, any sampled coordinates from the mesh

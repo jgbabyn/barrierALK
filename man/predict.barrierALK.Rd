@@ -4,7 +4,7 @@
 \alias{predict.barrierALK}
 \title{Function to predict from a barrierALK fit}
 \usage{
-predict.barrierALK(object, newdata = NULL, type = "response", ...)
+\method{predict}{barrierALK}(object, newdata = NULL, type = "response", ...)
 }
 \arguments{
 \item{object}{the barrierALK fit object}

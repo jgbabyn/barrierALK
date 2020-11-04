@@ -4,8 +4,22 @@
 \alias{interpret.salk}
 \title{Interpret a spatial ALK model formula}
 \usage{
-interpret.salk(sf, equalSlopes = FALSE, data = NULL, minAge, maxAge,
-  pgf = NULL)
+interpret.salk(
+  sf,
+  equalSlopes = FALSE,
+  data = NULL,
+  minAge,
+  maxAge,
+  pgf = NULL,
+  pred = FALSE,
+  atilde = NULL,
+  lambda = 0,
+  penalty.matrix = NULL,
+  penrand = FALSE,
+  starting.param = NULL,
+  scale,
+  stdobj = NULL
+)
 }
 \arguments{
 \item{sf}{a spatial ALK model formula}
@@ -19,6 +33,14 @@ interpret.salk(sf, equalSlopes = FALSE, data = NULL, minAge, maxAge,
 \item{maxAge}{the maximum age group to fit}
 
 \item{pgf}{the predicted gaussian field workaround}
+
+\item{pred}{are we predicting?}
+
+\item{atilde}{customize the length factor too?}
+
+\item{lambda}{for penalized smoothing}
+
+\item{scale}{whether to rescale the fixed effects parameters}
 }
 \description{
 Reads in a spatial ALK formula and sets up the data for loading into the TMB model.

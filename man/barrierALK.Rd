@@ -4,10 +4,26 @@
 \alias{barrierALK}
 \title{Barrier ALK, fit a barrier ALK model to age-growth data to generate ALKs}
 \usage{
-barrierALK(formula, minAge, maxAge, lengthVar = "length",
-  equalSlopes = FALSE, data = NULL, silent = TRUE, runSA = TRUE,
-  control = NULL, ..., optMethod = "nlminb",
-  cores = parallel::detectCores())
+barrierALK(
+  formula,
+  minAge,
+  maxAge,
+  lengthVar = "length",
+  equalSlopes = FALSE,
+  data = NULL,
+  silent = TRUE,
+  runSA = TRUE,
+  control = NULL,
+  ...,
+  optMethod = "nlminb",
+  cores = parallel::detectCores(),
+  lambda = 0,
+  penalty.matrix = NULL,
+  penalize.hyper = FALSE,
+  starting.param = NULL,
+  scale = FALSE,
+  edf.calc = TRUE
+)
 }
 \arguments{
 \item{formula}{formula for the barrier alk fit}
@@ -19,6 +35,20 @@ barrierALK(formula, minAge, maxAge, lengthVar = "length",
 \item{data}{optionally data frame containing data}
 
 \item{silent}{whether to run the trace from TMB}
+
+\item{runSA}{Apply Symbolic Analysis from TMB package in effort to up model}
+
+\item{control}{control options for optimr optimizer}
+
+\item{optMethod}{the optimizer within optimr to use}
+
+\item{lambda}{the value or vector for penalization factors, default is 0, no penalization}
+
+\item{penalty.matrix}{manually set the penalty matrix to use}
+
+\item{penalize.hyper}{penalize the hyper parameters for the gf approximations?}
+
+\item{starting.param}{named list to replace default starting parameter values with}
 }
 \description{
 Fit smooth age-length keys with the possibility of incorporating spatial error terms represented by

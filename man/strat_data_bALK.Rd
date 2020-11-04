@@ -6,10 +6,14 @@
 Crusty
 Alternative strat_data for barrierALK objects}
 \usage{
-strat_data_bALK(formula, b.opts = list(minAge = 1, maxAge = 13,
-  equalSlopes = FALSE, silent = TRUE, runSA = TRUE, control = list(eval.max
-  = 5000, iter.max = 5000)), mesh = NULL, barrier.triangles = NULL,
-  cores = parallel::detectCores())
+strat_data_bALK(
+  formula,
+  b.opts = list(minAge = 1, maxAge = 13, equalSlopes = FALSE, silent = TRUE, runSA =
+    TRUE, control = list(eval.max = 5000, iter.max = 5000)),
+  mesh = NULL,
+  barrier.triangles = NULL,
+  cores = parallel::detectCores()
+)
 }
 \arguments{
 \item{formula}{the barrierALK formula}

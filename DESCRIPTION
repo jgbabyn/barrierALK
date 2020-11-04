@@ -22,7 +22,7 @@ Imports:
     groupdata2,
     standardize
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 LinkingTo:
     Rcpp,
     RcppEigen,

@@ -4,8 +4,16 @@
 \alias{simFromMesh}
 \title{Function to simulate data from a mesh given certain hyper-parameters}
 \usage{
-simFromMesh(mesh, size = 5000, sp_type = "barrier", hyperp1, hyperp2,
-  barrier.triangles = NULL, barrier.polygon = NULL, seed = NULL)
+simFromMesh(
+  mesh,
+  size = 5000,
+  sp_type = "barrier",
+  hyperp1,
+  hyperp2,
+  barrier.triangles = NULL,
+  barrier.polygon = NULL,
+  seed = NULL
+)
 }
 \arguments{
 \item{mesh}{The mesh to simulate from}

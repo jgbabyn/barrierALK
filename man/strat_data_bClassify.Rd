@@ -4,9 +4,13 @@
 \alias{strat_data_bClassify}
 \title{Instead of making an ALK just classify fish}
 \usage{
-strat_data_bClassify(formula, b.opts = list(minAge = 1, maxAge = 13,
-  equalSlopes = FALSE, silent = TRUE, runSA = TRUE, control = list(eval.max
-  = 5000, iter.max = 5000)), mesh = NULL, barrier.triangles = NULL)
+strat_data_bClassify(
+  formula,
+  b.opts = list(minAge = 1, maxAge = 13, equalSlopes = FALSE, silent = TRUE, runSA =
+    TRUE, control = list(eval.max = 5000, iter.max = 5000)),
+  mesh = NULL,
+  barrier.triangles = NULL
+)
 }
 \arguments{
 \item{formula}{the barrierALK formula}

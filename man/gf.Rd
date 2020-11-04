@@ -4,8 +4,17 @@
 \alias{gf}
 \title{Function to handle the gaussian field construction}
 \usage{
-gf(loc_x, loc_y, model = "barrier", mesh = NULL,
-  barrier.triangles = NULL, rangeKey = NULL, sdUkey = NULL)
+gf(
+  loc_x,
+  loc_y,
+  model = "barrier",
+  mesh = NULL,
+  barrier.triangles = NULL,
+  rangeKey = NULL,
+  sdUkey = NULL,
+  ageKey = NULL,
+  year = NULL
+)
 }
 \arguments{
 \item{loc_x}{The x coordinates of the spatial data}
@@ -21,6 +30,10 @@ gf(loc_x, loc_y, model = "barrier", mesh = NULL,
 \item{rangeKey}{optionally specify which age groups to share ranges in the precision matrices, default is all ages unique}
 
 \item{sdUkey}{optionally specify which age groups to share sigma_u's in the precision matrices, default is all ages unique}
+
+\item{ageKey}{for spatAR, specify age groups share same settings}
+
+\item{year}{factor variable indicating the year to use}
 }
 \description{
 This function specifies the gaussian field used within a spatialALK formula

@@ -6,17 +6,6 @@
 
 using namespace Rcpp;
 
-// fuckthis
-int fuckthis(int why);
-RcppExport SEXP _barrierALK_fuckthis(SEXP whySEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type why(whySEXP);
-    rcpp_result_gen = Rcpp::wrap(fuckthis(why));
-    return rcpp_result_gen;
-END_RCPP
-}
 // quickPredict
 Eigen::VectorXd quickPredict(const Eigen::Map<Eigen::MatrixXd> X, const Eigen::Map<Eigen::VectorXd> beta, const Eigen::Map<Eigen::MatrixXd> ranX, const Eigen::MappedSparseMatrix<double> A, const Rcpp::IntegerVector cohort, const Rcpp::IntegerVector ranXind);
 RcppExport SEXP _barrierALK_quickPredict(SEXP XSEXP, SEXP betaSEXP, SEXP ranXSEXP, SEXP ASEXP, SEXP cohortSEXP, SEXP ranXindSEXP) {
@@ -143,7 +132,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_barrierALK_fuckthis", (DL_FUNC) &_barrierALK_fuckthis, 1},
     {"_barrierALK_quickPredict", (DL_FUNC) &_barrierALK_quickPredict, 6},
     {"_barrierALK_quickPredictAR", (DL_FUNC) &_barrierALK_quickPredictAR, 7},
     {"_barrierALK_quickPredictB", (DL_FUNC) &_barrierALK_quickPredictB, 2},

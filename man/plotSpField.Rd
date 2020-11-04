@@ -4,8 +4,7 @@
 \alias{plotSpField}
 \title{Plot a spatial field}
 \usage{
-plotSpField(field, mesh, xlim, ylim, poly.barrier = NULL, dims = c(300,
-  300))
+plotSpField(field, mesh, xlim, ylim, poly.barrier = NULL, dims = c(300, 300))
 }
 \arguments{
 \item{field}{field to plot}

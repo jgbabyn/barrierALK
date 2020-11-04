@@ -4,9 +4,19 @@
 \alias{plot.predALK}
 \title{Plot a predicted ALK}
 \usage{
-plot.predALK(x, lwd = 2, type = "l", ylab = "Proportion",
-  xlab = "Length (CM)", col = NULL, lty = seq_len(length(colors)),
-  ..., rawALK = NULL, plotFreq = FALSE, autoLen = TRUE)
+\method{plot}{predALK}(
+  x,
+  lwd = 2,
+  type = "l",
+  ylab = "Proportion",
+  xlab = "Length (CM)",
+  col = NULL,
+  lty = seq_len(length(colors)),
+  ...,
+  rawALK = NULL,
+  plotFreq = FALSE,
+  autoLen = TRUE
+)
 }
 \arguments{
 \item{x}{the predALK object to plot}
