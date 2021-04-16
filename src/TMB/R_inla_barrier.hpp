@@ -77,7 +77,7 @@ namespace R_inla_barrier {
       A +=  raiseRange*fem.D(k);
     }
     //M_PI is the pi constant defined in math.h which is probably loaded somewhere along the line...
-    Type restOfStory = (1/pow(sigma,2))/(M_PI/2)*4;
+    Type restOfStory = (1/pow(sigma,2))/(M_PI/2)*3; //Change a 4 to a 3!
     SparseMatrix<Type> Q = A.transpose()*Cinv*A*restOfStory;
     return Q;
   }
